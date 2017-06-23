@@ -1,14 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
+    moduleId: module.id,
     selector: 'my-app',
-    template: `<h2>Количество кликов: {{clicks}}</h2>
-              <child-comp (onChanged)="onChanged($event)"></child-comp>`
+    templateUrl: 'app.component.html',
+    styleUrls: ['app.component.css']
 })
-export class AppComponent {
-
-    clicks: number = 0;
-    onChanged(increased) {
-        increased == true ? this.clicks++ : this.clicks--;
-    }
-}
+export class AppComponent { }
